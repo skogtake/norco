@@ -1,0 +1,402 @@
+@import url("normalize.css");
+@import url("fonts.css");
+@import url("./font-awesome-4.7.0/css/font-awesome.min.css");
+
+header {
+    display: flex;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    height: 70px;
+    width: 100%;
+    background: #555;
+}
+
+header .logo {
+    position: relative;
+    float: left;
+    width: 40px;
+    margin-left: 36px;
+    margin-right: -20px;
+    margin-top: 5px;
+}
+
+header nav menu {
+    float: left;
+    height: 70px;
+    margin: 0;
+    padding: 0 20px 0 0;
+    font: 20px 'Raleway', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+header nav menu ul {
+    margin: 0px 0px 0px 0px;
+}
+
+header nav menu ul li {
+    display: inline-block;
+    height: 70px;
+    margin-left: 0px;
+}
+
+header nav menu ul li a {
+    display: inline-block;
+    padding: 0 10px;
+    color: #fff;
+    line-height: 70px;
+    text-decoration: none;
+    text-align: left;
+}
+
+#bike {
+    height: 620px;
+    padding-top: 70px;
+    background: url(../pic/Mike_Hopkins.jpg) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.row {
+    margin: 0 auto;
+    padding: 60px 150px;
+}
+
+#bike .row .text {
+    float: right;
+    width: 400px;
+    padding: 40px 60px;
+    background-color: rgba(100, 100, 100, 0.5);
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#bike .row .text h1 {
+    color: #cc0000;
+}
+
+#bike .row .text p {
+    font: bold 24px 'Open Sans', sans-serif;
+    color: #fff;
+    text-align: left;
+}
+
+#overview {
+    height: 450px;
+    background: url(../pic/red.png) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.underlines {
+    margin-top: -20px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    text-align: center;
+}
+
+.underlines pre {
+    margin: 0;
+}
+
+#overview .row .text {
+    padding: 50px 20px;
+    font: 18px 'Raleway', sans-serif;
+    color: #fff;
+    text-align: left;
+    line-height: 25px;
+    word-spacing: 2px;
+}
+
+#features h1, #features .underlines {
+    color: #ee0000;
+}
+
+#features .features-img {
+    height: 250px;
+    margin: 40px 0;
+    background: url(../pic/features.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+    overflow: hidden;
+}
+
+#features .flex-container {
+    padding: 0 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+#features .flex-container .feature {
+    margin: 10px 0;
+    flex-basis: 450px;
+    font-size: 18px;
+}
+
+#features .flex-container .feature .counter {
+    color: #ee0000;
+    font-weight: bold;
+
+}
+
+#features .flex-container .feature .title {
+    color: #444;
+    font-weight: bold;
+}
+
+#features .flex-container .feature .description {
+    padding-left: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+}
+
+#technology {
+    background: url(../pic/drop.png) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#technology h1, #technology .underlines {
+    color: #fff;
+}
+
+#technology .row .flex-container {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+#technology .row .flex-container .tech-pic {
+    height: 160px;
+    width: 270px;
+    background-position: center;
+    background-size: contain;
+    overflow: hidden;
+}
+
+.advanced-ride-technology {
+    background: url(../pic/advanced-ride-technology.jpg) no-repeat;
+}
+
+.advanced-ride-technology:hover::before {
+    content: 'Advanced Ride Technology';
+    position: relative;
+    top: 70px;
+    left: 10px;
+    color: #fff;
+    font: bold 20px 'Raleway', sans-serif;
+}
+
+.gravity-tune {
+    background: url(../pic/gravity-tune.jpg) no-repeat;
+}
+
+.gravity-tune:hover::before {
+    content: 'Gravity Tune';
+    position: relative;
+    top: 70px;
+    left: 70px;
+    color: #fff;
+    font: bold 20px 'Raleway', sans-serif;
+}
+
+.size-scaled-tubing-mtn {
+    background: url(../pic/size-scaled-tubing-mtn.jpg) no-repeat;
+}
+
+.size-scaled-tubing-mtn:hover::before {
+    content: 'Size Scaled Tubing';
+    position: relative;
+    top: 70px;
+    left: 40px;
+    color: #fff;
+    font: bold 20px 'Raleway', sans-serif;
+}
+
+.smoothcore {
+    background: url(../pic/smoothcore.jpg) no-repeat;
+}
+
+.smoothcore:hover::before {
+    content: 'Smoothcore';
+    position: relative;
+    top: 70px;
+    left: 70px;
+    color: #fff;
+    font: bold 20px 'Raleway', sans-serif;
+}
+
+.armorlite {
+    background: url(../pic/armorlite.jpg) no-repeat;
+}
+
+.armorlite:hover::before {
+    content: 'Armorlite';
+    position: relative;
+    top: 70px;
+    left: 90px;
+    color: #fff;
+    font: bold 20px 'Raleway', sans-serif;
+}
+
+.post-mount-brakes {
+    background: url(../pic/post-mount-brakes.jpg) no-repeat;
+}
+
+.post-mount-brakes:hover::before {
+    content: 'Post Mount Brakes';
+    position: relative;
+    top: 70px;
+    left: 40px;
+    color: #fff;
+    font: bold 20px 'Raleway', sans-serif;
+}
+
+#characters .flex-container {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+#characters .flex-container img {
+    width: 300px;
+    transition: opacity ease-out 0.2s;
+}
+
+#characters h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    color: #666;
+    text-transform: uppercase;
+}
+
+#characters .flex-container-specs {
+    display: flex;
+    height: 670px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+#characters .flex-container-specs .component {
+    width: 520px;
+}
+
+#characters .flex-container-specs .component h3 {
+    font: 18px 'Raleway', sans-serif;
+    color: #6a6a6a;
+}
+
+#characters .flex-container-specs .component .part {
+    font: 16px 'Raleway', sans-serif;
+    color: #707070;
+}
+
+#characters .flex-container-specs .component .part .name {
+    display: inline-block;
+    width: 180px;
+    vertical-align: top;
+}
+
+#characters .flex-container-specs .component .part .item {
+    display: inline-block;
+    width: 230px;
+    vertical-align: top;
+}
+
+footer {
+    height: 450px;
+    background: url(../pic/footer.png) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+footer .flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+footer .row .flex-container .column {
+    flex-basis: 300px;
+}
+
+footer .row .flex-container .column h2 {
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+footer .row .flex-container .column .underlines {
+    color: #fff;
+    font-size: 15px;
+}
+
+footer .row .flex-container .column menu {
+    padding: 0;
+}
+
+footer .row a {
+    display: block;
+    margin-top: 5px;
+    padding: 0;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+}
+
+footer .row a:hover {
+    color: #ccc;
+}
+
+footer .row .social {
+    padding: 30px 0;
+    color: #fff;
+    text-align: center;
+}
+
+footer .row .social a {
+    display: inline-block;
+}
+
+
+footer .row .social a i {
+    padding: 0 10px;
+}
+
+footer .row p {
+    color: #fff;
+    font-size: 80%;
+    text-align: center;
+}

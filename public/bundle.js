@@ -120,8 +120,7 @@
 	    displayName: 'Bike',
 
 	    render: function render() {
-	        var description = "SECONDS AT THE START GATE FEEL LIKE AN ETERNITY\. MIND AND BODY ARE PULSING \— IN PERFECT SYNC\. YOUR LINE GIVES YOU THE EDGE YOU NEED\. YOUR BIKE WILL HELP YOU STICK IT\.";
-
+	        var description = this.props.data.description;
 	        return _react2.default.createElement(
 	            'section',
 	            { id: 'bike' },
@@ -151,7 +150,7 @@
 	    displayName: 'Overview',
 
 	    render: function render() {
-	        var overview = 'The Aurum Killer B Carbon was designed in conjunction with Norco\'s World Cup DH teams past and present and proven on the World Cup stage. This 650B-wheeled race bike represents the cutting edge of Norco\'s engineering and design capability and brings together all of our most advanced carbon, aluminum and mountain technologies. The Aurum - Latin for \"gold\" - earned its name by turning the most challenging terrain features into advantages over other riders.';
+	        var overview = this.props.data.overview;
 	        return _react2.default.createElement(
 	            'section',
 	            { id: 'overview' },
@@ -186,24 +185,7 @@
 	    displayName: 'Features',
 
 	    render: function render() {
-	        var features = [{
-	            title: 'AURUM CARBON KILLER B MKII FRAME:',
-	            description: 'Lightweight and durable carbon front triangle with integrated frame protection and a removable fender.'
-	        }, {
-	            title: 'GRAVITY TUNE:',
-	            description: 'Ensures optimal body position and weight distribution to riders of all sizes, delivering superior handling and control at high speeds.'
-	        }, {
-	            title: 'A.R.T. SUSPENSION:',
-	            description: 'Supple, predictable and proven suspension for greater confidence and control.'
-	        }, {
-	            title: 'DH-OPTIMIZED 7SPD DRIVETRAIN:',
-	            description: 'All the gears you need and nothing more; reduced rear end width for better heel and hazard clearance.'
-	        }, {
-	            title: '650B WHEELS:',
-	            description: 'Faster rolling speed, better rollover and enhanced traction for high speed cornering.'
-	        }];
-
-	        features = features.map(function (item, i) {
+	        var features = this.props.data.features.map(function (item, i) {
 	            return _react2.default.createElement(
 	                'div',
 	                { key: i, className: 'feature' },
@@ -310,9 +292,7 @@
 	    render: function render() {
 	        var _this = this;
 
-	        var bikes = ['pic/bike1.png', 'pic/bike2.png', 'pic/bike3.png'];
-
-	        bikes = bikes.map(function (item, i) {
+	        var bikes = this.props.data.bikes.map(function (item, i) {
 	            if (_this.state.activeTab - 1 === i) {
 	                return _react2.default.createElement('img', { key: i, src: item, style: { opacity: 1 }, onMouseOver: function onMouseOver() {
 	                        return _this.handler(i + 1);
@@ -324,378 +304,7 @@
 	            }
 	        });
 
-	        var specs = [{
-	            name: 'AURUM C7.1',
-	            components: [{
-	                name: 'FRAMESET',
-	                items: [{
-	                    name: 'FRAME',
-	                    item: 'Aurum frame (CARBON / ALLOY )'
-	                }, {
-	                    name: 'FORK',
-	                    item: 'Fox Factory Float 40 w/Kashima'
-	                }, {
-	                    name: 'REAR SHOCK',
-	                    item: 'Fox Factory Float X2 w/Kashima'
-	                }]
-	            }, {
-	                name: 'COMPONENTS',
-	                items: [{
-	                    name: 'SEAT POST',
-	                    item: 'Pivotal 350mm x 30.9mm'
-	                }, {
-	                    name: 'SEAT POST CLAMP',
-	                    item: 'Built into frame (comes assembled with frame)'
-	                }, {
-	                    name: 'SHIFTER CASING',
-	                    item: 'N/A'
-	                }, {
-	                    name: 'SADDLE',
-	                    item: 'Norco Pivotal DH saddle'
-	                }, {
-	                    name: 'HEADSET',
-	                    item: 'Cane Creek 40'
-	                }, {
-	                    name: 'HEADSET SPACER',
-	                    item: 'N/A'
-	                }, {
-	                    name: 'TOP CAP',
-	                    item: 'N/A'
-	                }, {
-	                    name: 'STEM',
-	                    item: 'Race face Atlas Direct Mount 50 mm 35 bulge'
-	                }, {
-	                    name: 'HANDLEBAR',
-	                    item: 'Race Face Six C carbon 800 mm wide bar (35 mm)'
-	                }, {
-	                    name: 'GRIPS',
-	                    item: 'Race Face Half Nelson lock on grips'
-	                }, {
-	                    name: 'FRONT BRAKE',
-	                    item: 'Sram Guide RSC hydraulic w/200mm rotor'
-	                }, {
-	                    name: 'CHAIN TENSIONER',
-	                    item: 'MRP G 4'
-	                }, {
-	                    name: 'REAR BRAKE',
-	                    item: 'Sram Guide RSC hydraulic w/200mm rotor'
-	                }, {
-	                    name: 'BRAKE LEVERS',
-	                    item: 'Sram Guide RSC'
-	                }, {
-	                    name: 'BRAKE CABLE CASING',
-	                    item: 'N/A'
-	                }, {
-	                    name: 'BRAKE ROTORS',
-	                    item: 'N/A'
-	                }]
-	            }, {
-	                name: 'WHEELS',
-	                items: [{
-	                    name: 'FRONT HUB',
-	                    item: 'DT 240 20 mm front hub'
-	                }, {
-	                    name: 'FRONT HUB SKEWER',
-	                    item: 'Fox 20mm nutted axle, allen key type'
-	                }, {
-	                    name: 'REAR HUB',
-	                    item: 'DT 240 with XD ( 142 x 12 )'
-	                }, {
-	                    name: 'REAR HUB SKEWER',
-	                    item: 'Norco Thru-axle 12mm, allen key'
-	                }, {
-	                    name: 'SPOKES/NIPPLES',
-	                    item: 'DT Competition double butted brass nipples'
-	                }, {
-	                    name: 'RIMS',
-	                    item: 'DT EX 511 30 mm inner 27.5'
-	                }, {
-	                    name: 'TIRES',
-	                    item: 'Magic Mary 27.5x2.35 super gravity, Vert star'
-	                }, {
-	                    name: 'TUBES',
-	                    item: 'N/A'
-	                }]
-	            }, {
-	                name: 'DRIVETRAIN',
-	                items: [{
-	                    name: 'SHIFTER FRONT',
-	                    item: 'N/A'
-	                }, {
-	                    name: 'SHIFTER REAR',
-	                    item: 'Sram XO 1 DH 1x7'
-	                }, {
-	                    name: 'FRONT DERAILLEUR',
-	                    item: 'N/A'
-	                }, {
-	                    name: 'REAR DERAILLEUR',
-	                    item: 'Sram XO 1 DH medium cage 7 speed RD'
-	                }, {
-	                    name: 'CASSETTE',
-	                    item: 'Sram XO1 DH 10-24T 7 spd casette CS HG795'
-	                }, {
-	                    name: 'CRANKSET',
-	                    item: 'Race Face Six C Carbon crank 34T Direct Mnt.'
-	                }, {
-	                    name: 'BOTTOM BRACKET',
-	                    item: 'Race Face BB included with crankset'
-	                }, {
-	                    name: 'PEDALS',
-	                    item: 'N/A'
-	                }, {
-	                    name: 'CHAIN',
-	                    item: 'Sram PC X1 chain 108 link'
-	                }]
-	            }]
-	        }, {
-	            name: 'AURUM C7.2',
-	            components: [{
-	                name: 'FRAMESET',
-	                items: [{
-	                    name: 'FRAME',
-	                    item: 'Aurum frame (CARBON / ALLOY )'
-	                }, {
-	                    name: 'FORK',
-	                    item: 'Boxxer R2C2 Team 200 mm travel 27.5'
-	                }, {
-	                    name: 'REAR SHOCK',
-	                    item: 'Rockshox Vivid RC2C Coil'
-	                }]
-	            }, {
-	                name: 'COMPONENTS',
-	                items: [{
-	                    name: 'SEAT POST',
-	                    item: 'Pivotal 350mm x 30.9mm'
-	                }, {
-	                    name: 'SEAT POST CLAMP',
-	                    item: 'Built into frame (comes assembled with frame)'
-	                }, {
-	                    name: 'SHIFTER CASING',
-	                    item: 'N/A'
-	                }, {
-	                    name: 'SADDLE',
-	                    item: 'Norco Pivotal DH saddle'
-	                }, {
-	                    name: 'HEADSET',
-	                    item: 'Cane Creek 40'
-	                }, {
-	                    name: 'HEADSET SPACER',
-	                    item: 'N/A'
-	                }, {
-	                    name: 'TOP CAP',
-	                    item: 'N/A'
-	                }, {
-	                    name: 'STEM',
-	                    item: 'Race Face Chester DM 35 stem'
-	                }, {
-	                    name: 'HANDLEBAR',
-	                    item: 'Race Face Atlas 20mmx800mm (35mm bulge)'
-	                }, {
-	                    name: 'GRIPS',
-	                    item: 'Race Face Half Nelson lock on grips'
-	                }, {
-	                    name: 'FRONT BRAKE',
-	                    item: 'Sram Guide RS hydraulic w/200mm rotor'
-	                }, {
-	                    name: 'CHAIN TENSIONER',
-	                    item: 'MRP G 3'
-	                }, {
-	                    name: 'REAR BRAKE',
-	                    item: 'Sram Guide RS hydraulic w/200mm rotor'
-	                }, {
-	                    name: 'BRAKE LEVERS',
-	                    item: 'Sram Guide RS'
-	                }, {
-	                    name: 'BRAKE CABLE CASING',
-	                    item: 'N/A'
-	                }, {
-	                    name: 'BRAKE ROTORS',
-	                    item: 'N/A'
-	                }]
-	            }, {
-	                name: 'WHEELS',
-	                items: [{
-	                    name: 'FRONT HUB',
-	                    item: 'DT 350 20 mm front hub '
-	                }, {
-	                    name: 'FRONT HUB SKEWER',
-	                    item: 'Rockshox 20mm axle, allen key type'
-	                }, {
-	                    name: 'REAR HUB',
-	                    item: 'DT 350 with XD and 36 engagement'
-	                }, {
-	                    name: 'REAR HUB SKEWER',
-	                    item: 'Norco Thru-axle 12mm, allen key'
-	                }, {
-	                    name: 'SPOKES/NIPPLES',
-	                    item: 'DT Competition double butted brass nipples'
-	                }, {
-	                    name: 'RIMS',
-	                    item: 'DT EX 512 30 mm inner 27.5'
-	                }, {
-	                    name: 'TIRES',
-	                    item: 'Magic Mary 27.5x2.35 super gravity, Vert star'
-	                }, {
-	                    name: 'TUBES',
-	                    item: 'N/A'
-	                }]
-	            }, {
-	                name: 'DRIVETRAIN',
-	                items: [{
-	                    name: 'SHIFTER FRONT',
-	                    item: 'N/A'
-	                }, {
-	                    name: 'SHIFTER REAR',
-	                    item: 'Sram XO 1 DH 1x7'
-	                }, {
-	                    name: 'FRONT DERAILLEUR',
-	                    item: 'N/A'
-	                }, {
-	                    name: 'REAR DERAILLEUR',
-	                    item: 'Sram XO 1 DH medium cage 7 speed RD'
-	                }, {
-	                    name: 'CASSETTE',
-	                    item: 'Sram XO1 DH 10-24T 7 spd casette CS HG795'
-	                }, {
-	                    name: 'CRANKSET',
-	                    item: 'Race Face Atlas DH'
-	                }, {
-	                    name: 'BOTTOM BRACKET',
-	                    item: 'Comes with crank'
-	                }, {
-	                    name: 'PEDALS',
-	                    item: 'N/A'
-	                }, {
-	                    name: 'CHAIN',
-	                    item: 'Sram PC X1 chain 108 link'
-	                }]
-	            }]
-	        }, {
-	            name: 'AURUM C7.3',
-	            components: [{
-	                name: 'FRAMESET',
-	                items: [{
-	                    name: 'FRAME',
-	                    item: 'Aurum carbon / alloy 27.5'
-	                }, {
-	                    name: 'FORK',
-	                    item: 'Rock shox Boxxer RC 27.5'
-	                }, {
-	                    name: 'REAR SHOCK',
-	                    item: 'Rock shox KAGE RC coil spring'
-	                }]
-	            }, {
-	                name: 'COMPONENTS',
-	                items: [{
-	                    name: 'SEAT POST',
-	                    item: 'I Beam 30.9'
-	                }, {
-	                    name: 'SEAT POST CLAMP',
-	                    item: 'Built into frame'
-	                }, {
-	                    name: 'SHIFTER CASING',
-	                    item: 'N/A'
-	                }, {
-	                    name: 'SADDLE',
-	                    item: 'SDG I Fly 2.0 I Beam'
-	                }, {
-	                    name: 'HEADSET',
-	                    item: 'FSA #57E-1 1.5" to 1-1/8"" w / 1-1/8"" crown race "'
-	                }, {
-	                    name: 'HEADSET SPACER',
-	                    item: 'N/A'
-	                }, {
-	                    name: 'TOP CAP',
-	                    item: 'N/A'
-	                }, {
-	                    name: 'STEM',
-	                    item: 'Race Face Chester DM 35 stem'
-	                }, {
-	                    name: 'HANDLEBAR',
-	                    item: 'Race Face Chester Bar 780mm'
-	                }, {
-	                    name: 'GRIPS',
-	                    item: 'Norco Lock On Grip'
-	                }, {
-	                    name: 'FRONT BRAKE',
-	                    item: 'Sram Guide R hydraulic w/200mm rotor'
-	                }, {
-	                    name: 'CHAIN TENSIONER',
-	                    item: 'E13 LG 1 guide, steel backplate w/lower guard'
-	                }, {
-	                    name: 'REAR BRAKE',
-	                    item: 'Sram Guide R hydraulic w/200mm rotor'
-	                }, {
-	                    name: 'BRAKE LEVERS',
-	                    item: 'Sram Guide R'
-	                }, {
-	                    name: 'BRAKE CABLE CASING',
-	                    item: 'N/A'
-	                }, {
-	                    name: 'BRAKE ROTORS',
-	                    item: 'N/A'
-	                }]
-	            }, {
-	                name: 'WHEELS',
-	                items: [{
-	                    name: 'FRONT HUB',
-	                    item: 'DT 370 front 20x110mm'
-	                }, {
-	                    name: 'FRONT HUB SKEWER',
-	                    item: 'Rockshox 20mm axle, allen key type'
-	                }, {
-	                    name: 'REAR HUB',
-	                    item: 'DT 370 rear hub 142x12 mm'
-	                }, {
-	                    name: 'REAR HUB SKEWER',
-	                    item: 'Norco Thru-axle 12mm, allen key'
-	                }, {
-	                    name: 'SPOKES/NIPPLES',
-	                    item: 'Sapim butted black stainless steel spokes'
-	                }, {
-	                    name: 'RIMS',
-	                    item: 'WTB STP I29'
-	                }, {
-	                    name: 'TIRES',
-	                    item: 'Maxxis Minion DHF frnt , DHR II rear 27.5x2.40 Super Tacky'
-	                }, {
-	                    name: 'TUBES',
-	                    item: 'N/A'
-	                }]
-	            }, {
-	                name: 'DRIVETRAIN',
-	                items: [{
-	                    name: 'SHIFTER FRONT',
-	                    item: 'N/A'
-	                }, {
-	                    name: 'SHIFTER REAR',
-	                    item: 'Sram GX 1 7 speed trigger'
-	                }, {
-	                    name: 'FRONT DERAILLEUR',
-	                    item: 'N/A'
-	                }, {
-	                    name: 'REAR DERAILLEUR',
-	                    item: 'Sram GX DH 7 speed mid cage'
-	                }, {
-	                    name: 'CASSETTE',
-	                    item: 'Sram CS PG 720 DH 11-25T cassette'
-	                }, {
-	                    name: 'CRANKSET',
-	                    item: 'Race Face Chester crank 36T'
-	                }, {
-	                    name: 'BOTTOM BRACKET',
-	                    item: 'Comes with crank'
-	                }, {
-	                    name: 'PEDALS',
-	                    item: 'N/A'
-	                }, {
-	                    name: 'CHAIN',
-	                    item: 'Sram PC 1110 11 speed chain'
-	                }]
-	            }]
-	        }];
-
-	        var specsJsx = specs.map(function (item, i) {
+	        var specs = this.props.data.specs.map(function (item, i) {
 	            var components = item.components.map(function (component, j) {
 	                var parts = component.items.map(function (part, k) {
 	                    return _react2.default.createElement(
@@ -767,9 +376,9 @@
 	                    'h2',
 	                    null,
 	                    'specifications: ',
-	                    specs[this.state.activeTab - 1].name
+	                    this.props.data.specs[this.state.activeTab - 1].name
 	                ),
-	                specsJsx
+	                specs
 	            )
 	        );
 	    }
@@ -779,18 +388,8 @@
 	    displayName: 'Footer',
 
 	    render: function render() {
-	        var info = [{
-	            title: 'company',
-	            links: ['About Norco', 'Comuntity Support', 'Careers']
-	        }, {
-	            title: 'support',
-	            links: ['Privacy Policy', 'FAQ', 'Warranty', 'Safety & Recalls', 'Owner\'s Manual']
-	        }, {
-	            title: 'helpful links',
-	            links: ['Resort & Demo Partners', 'Intended Use', 'Bicycle Archives', 'Bike Finder', 'Bike Registration']
-	        }];
 
-	        info = info.map(function (item, i) {
+	        var info = this.props.data.info.map(function (item, i) {
 	            var links = item.links.map(function (link, j) {
 	                return _react2.default.createElement(
 	                    'a',
@@ -867,7 +466,7 @@
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    '\xA9 2016 Norco Bicycles | Use of this site constitutes acceptance of our Privacy Policy'
+	                    this.props.data.copyrights
 	                )
 	            )
 	        );
@@ -878,16 +477,431 @@
 	    displayName: 'App',
 
 	    render: function render() {
+	        var data = {
+	            header: {},
+	            bike: {
+	                description: "SECONDS AT THE START GATE FEEL LIKE AN ETERNITY\. MIND AND BODY ARE PULSING \— IN PERFECT SYNC\. YOUR LINE GIVES YOU THE EDGE YOU NEED\. YOUR BIKE WILL HELP YOU STICK IT\."
+	            },
+	            overview: {
+	                overview: 'The Aurum Killer B Carbon was designed in conjunction with Norco\'s World Cup DH teams past and present and proven on the World Cup stage. This 650B-wheeled race bike represents the cutting edge of Norco\'s engineering and design capability and brings together all of our most advanced carbon, aluminum and mountain technologies. The Aurum - Latin for \"gold\" - earned its name by turning the most challenging terrain features into advantages over other riders.'
+	            },
+	            features: {
+	                features: [{
+	                    title: 'AURUM CARBON KILLER B MKII FRAME:',
+	                    description: 'Lightweight and durable carbon front triangle with integrated frame protection and a removable fender.'
+	                }, {
+	                    title: 'GRAVITY TUNE:',
+	                    description: 'Ensures optimal body position and weight distribution to riders of all sizes, delivering superior handling and control at high speeds.'
+	                }, {
+	                    title: 'A.R.T. SUSPENSION:',
+	                    description: 'Supple, predictable and proven suspension for greater confidence and control.'
+	                }, {
+	                    title: 'DH-OPTIMIZED 7SPD DRIVETRAIN:',
+	                    description: 'All the gears you need and nothing more; reduced rear end width for better heel and hazard clearance.'
+	                }, {
+	                    title: '650B WHEELS:',
+	                    description: 'Faster rolling speed, better rollover and enhanced traction for high speed cornering.'
+	                }]
+	            },
+	            technology: {},
+	            characters: {
+	                bikes: ['pic/bike1.png', 'pic/bike2.png', 'pic/bike3.png'],
+	                specs: [{
+	                    name: 'AURUM C7.1',
+	                    components: [{
+	                        name: 'FRAMESET',
+	                        items: [{
+	                            name: 'FRAME',
+	                            item: 'Aurum frame (CARBON / ALLOY )'
+	                        }, {
+	                            name: 'FORK',
+	                            item: 'Fox Factory Float 40 w/Kashima'
+	                        }, {
+	                            name: 'REAR SHOCK',
+	                            item: 'Fox Factory Float X2 w/Kashima'
+	                        }]
+	                    }, {
+	                        name: 'COMPONENTS',
+	                        items: [{
+	                            name: 'SEAT POST',
+	                            item: 'Pivotal 350mm x 30.9mm'
+	                        }, {
+	                            name: 'SEAT POST CLAMP',
+	                            item: 'Built into frame (comes assembled with frame)'
+	                        }, {
+	                            name: 'SHIFTER CASING',
+	                            item: 'N/A'
+	                        }, {
+	                            name: 'SADDLE',
+	                            item: 'Norco Pivotal DH saddle'
+	                        }, {
+	                            name: 'HEADSET',
+	                            item: 'Cane Creek 40'
+	                        }, {
+	                            name: 'HEADSET SPACER',
+	                            item: 'N/A'
+	                        }, {
+	                            name: 'TOP CAP',
+	                            item: 'N/A'
+	                        }, {
+	                            name: 'STEM',
+	                            item: 'Race face Atlas Direct Mount 50 mm 35 bulge'
+	                        }, {
+	                            name: 'HANDLEBAR',
+	                            item: 'Race Face Six C carbon 800 mm wide bar (35 mm)'
+	                        }, {
+	                            name: 'GRIPS',
+	                            item: 'Race Face Half Nelson lock on grips'
+	                        }, {
+	                            name: 'FRONT BRAKE',
+	                            item: 'Sram Guide RSC hydraulic w/200mm rotor'
+	                        }, {
+	                            name: 'CHAIN TENSIONER',
+	                            item: 'MRP G 4'
+	                        }, {
+	                            name: 'REAR BRAKE',
+	                            item: 'Sram Guide RSC hydraulic w/200mm rotor'
+	                        }, {
+	                            name: 'BRAKE LEVERS',
+	                            item: 'Sram Guide RSC'
+	                        }, {
+	                            name: 'BRAKE CABLE CASING',
+	                            item: 'N/A'
+	                        }, {
+	                            name: 'BRAKE ROTORS',
+	                            item: 'N/A'
+	                        }]
+	                    }, {
+	                        name: 'WHEELS',
+	                        items: [{
+	                            name: 'FRONT HUB',
+	                            item: 'DT 240 20 mm front hub'
+	                        }, {
+	                            name: 'FRONT HUB SKEWER',
+	                            item: 'Fox 20mm nutted axle, allen key type'
+	                        }, {
+	                            name: 'REAR HUB',
+	                            item: 'DT 240 with XD ( 142 x 12 )'
+	                        }, {
+	                            name: 'REAR HUB SKEWER',
+	                            item: 'Norco Thru-axle 12mm, allen key'
+	                        }, {
+	                            name: 'SPOKES/NIPPLES',
+	                            item: 'DT Competition double butted brass nipples'
+	                        }, {
+	                            name: 'RIMS',
+	                            item: 'DT EX 511 30 mm inner 27.5'
+	                        }, {
+	                            name: 'TIRES',
+	                            item: 'Magic Mary 27.5x2.35 super gravity, Vert star'
+	                        }, {
+	                            name: 'TUBES',
+	                            item: 'N/A'
+	                        }]
+	                    }, {
+	                        name: 'DRIVETRAIN',
+	                        items: [{
+	                            name: 'SHIFTER FRONT',
+	                            item: 'N/A'
+	                        }, {
+	                            name: 'SHIFTER REAR',
+	                            item: 'Sram XO 1 DH 1x7'
+	                        }, {
+	                            name: 'FRONT DERAILLEUR',
+	                            item: 'N/A'
+	                        }, {
+	                            name: 'REAR DERAILLEUR',
+	                            item: 'Sram XO 1 DH medium cage 7 speed RD'
+	                        }, {
+	                            name: 'CASSETTE',
+	                            item: 'Sram XO1 DH 10-24T 7 spd casette CS HG795'
+	                        }, {
+	                            name: 'CRANKSET',
+	                            item: 'Race Face Six C Carbon crank 34T Direct Mnt.'
+	                        }, {
+	                            name: 'BOTTOM BRACKET',
+	                            item: 'Race Face BB included with crankset'
+	                        }, {
+	                            name: 'PEDALS',
+	                            item: 'N/A'
+	                        }, {
+	                            name: 'CHAIN',
+	                            item: 'Sram PC X1 chain 108 link'
+	                        }]
+	                    }]
+	                }, {
+	                    name: 'AURUM C7.2',
+	                    components: [{
+	                        name: 'FRAMESET',
+	                        items: [{
+	                            name: 'FRAME',
+	                            item: 'Aurum frame (CARBON / ALLOY )'
+	                        }, {
+	                            name: 'FORK',
+	                            item: 'Boxxer R2C2 Team 200 mm travel 27.5'
+	                        }, {
+	                            name: 'REAR SHOCK',
+	                            item: 'Rockshox Vivid RC2C Coil'
+	                        }]
+	                    }, {
+	                        name: 'COMPONENTS',
+	                        items: [{
+	                            name: 'SEAT POST',
+	                            item: 'Pivotal 350mm x 30.9mm'
+	                        }, {
+	                            name: 'SEAT POST CLAMP',
+	                            item: 'Built into frame (comes assembled with frame)'
+	                        }, {
+	                            name: 'SHIFTER CASING',
+	                            item: 'N/A'
+	                        }, {
+	                            name: 'SADDLE',
+	                            item: 'Norco Pivotal DH saddle'
+	                        }, {
+	                            name: 'HEADSET',
+	                            item: 'Cane Creek 40'
+	                        }, {
+	                            name: 'HEADSET SPACER',
+	                            item: 'N/A'
+	                        }, {
+	                            name: 'TOP CAP',
+	                            item: 'N/A'
+	                        }, {
+	                            name: 'STEM',
+	                            item: 'Race Face Chester DM 35 stem'
+	                        }, {
+	                            name: 'HANDLEBAR',
+	                            item: 'Race Face Atlas 20mmx800mm (35mm bulge)'
+	                        }, {
+	                            name: 'GRIPS',
+	                            item: 'Race Face Half Nelson lock on grips'
+	                        }, {
+	                            name: 'FRONT BRAKE',
+	                            item: 'Sram Guide RS hydraulic w/200mm rotor'
+	                        }, {
+	                            name: 'CHAIN TENSIONER',
+	                            item: 'MRP G 3'
+	                        }, {
+	                            name: 'REAR BRAKE',
+	                            item: 'Sram Guide RS hydraulic w/200mm rotor'
+	                        }, {
+	                            name: 'BRAKE LEVERS',
+	                            item: 'Sram Guide RS'
+	                        }, {
+	                            name: 'BRAKE CABLE CASING',
+	                            item: 'N/A'
+	                        }, {
+	                            name: 'BRAKE ROTORS',
+	                            item: 'N/A'
+	                        }]
+	                    }, {
+	                        name: 'WHEELS',
+	                        items: [{
+	                            name: 'FRONT HUB',
+	                            item: 'DT 350 20 mm front hub '
+	                        }, {
+	                            name: 'FRONT HUB SKEWER',
+	                            item: 'Rockshox 20mm axle, allen key type'
+	                        }, {
+	                            name: 'REAR HUB',
+	                            item: 'DT 350 with XD and 36 engagement'
+	                        }, {
+	                            name: 'REAR HUB SKEWER',
+	                            item: 'Norco Thru-axle 12mm, allen key'
+	                        }, {
+	                            name: 'SPOKES/NIPPLES',
+	                            item: 'DT Competition double butted brass nipples'
+	                        }, {
+	                            name: 'RIMS',
+	                            item: 'DT EX 512 30 mm inner 27.5'
+	                        }, {
+	                            name: 'TIRES',
+	                            item: 'Magic Mary 27.5x2.35 super gravity, Vert star'
+	                        }, {
+	                            name: 'TUBES',
+	                            item: 'N/A'
+	                        }]
+	                    }, {
+	                        name: 'DRIVETRAIN',
+	                        items: [{
+	                            name: 'SHIFTER FRONT',
+	                            item: 'N/A'
+	                        }, {
+	                            name: 'SHIFTER REAR',
+	                            item: 'Sram XO 1 DH 1x7'
+	                        }, {
+	                            name: 'FRONT DERAILLEUR',
+	                            item: 'N/A'
+	                        }, {
+	                            name: 'REAR DERAILLEUR',
+	                            item: 'Sram XO 1 DH medium cage 7 speed RD'
+	                        }, {
+	                            name: 'CASSETTE',
+	                            item: 'Sram XO1 DH 10-24T 7 spd casette CS HG795'
+	                        }, {
+	                            name: 'CRANKSET',
+	                            item: 'Race Face Atlas DH'
+	                        }, {
+	                            name: 'BOTTOM BRACKET',
+	                            item: 'Comes with crank'
+	                        }, {
+	                            name: 'PEDALS',
+	                            item: 'N/A'
+	                        }, {
+	                            name: 'CHAIN',
+	                            item: 'Sram PC X1 chain 108 link'
+	                        }]
+	                    }]
+	                }, {
+	                    name: 'AURUM C7.3',
+	                    components: [{
+	                        name: 'FRAMESET',
+	                        items: [{
+	                            name: 'FRAME',
+	                            item: 'Aurum carbon / alloy 27.5'
+	                        }, {
+	                            name: 'FORK',
+	                            item: 'Rock shox Boxxer RC 27.5'
+	                        }, {
+	                            name: 'REAR SHOCK',
+	                            item: 'Rock shox KAGE RC coil spring'
+	                        }]
+	                    }, {
+	                        name: 'COMPONENTS',
+	                        items: [{
+	                            name: 'SEAT POST',
+	                            item: 'I Beam 30.9'
+	                        }, {
+	                            name: 'SEAT POST CLAMP',
+	                            item: 'Built into frame'
+	                        }, {
+	                            name: 'SHIFTER CASING',
+	                            item: 'N/A'
+	                        }, {
+	                            name: 'SADDLE',
+	                            item: 'SDG I Fly 2.0 I Beam'
+	                        }, {
+	                            name: 'HEADSET',
+	                            item: 'FSA #57E-1 1.5" to 1-1/8"" w / 1-1/8"" crown race "'
+	                        }, {
+	                            name: 'HEADSET SPACER',
+	                            item: 'N/A'
+	                        }, {
+	                            name: 'TOP CAP',
+	                            item: 'N/A'
+	                        }, {
+	                            name: 'STEM',
+	                            item: 'Race Face Chester DM 35 stem'
+	                        }, {
+	                            name: 'HANDLEBAR',
+	                            item: 'Race Face Chester Bar 780mm'
+	                        }, {
+	                            name: 'GRIPS',
+	                            item: 'Norco Lock On Grip'
+	                        }, {
+	                            name: 'FRONT BRAKE',
+	                            item: 'Sram Guide R hydraulic w/200mm rotor'
+	                        }, {
+	                            name: 'CHAIN TENSIONER',
+	                            item: 'E13 LG 1 guide, steel backplate w/lower guard'
+	                        }, {
+	                            name: 'REAR BRAKE',
+	                            item: 'Sram Guide R hydraulic w/200mm rotor'
+	                        }, {
+	                            name: 'BRAKE LEVERS',
+	                            item: 'Sram Guide R'
+	                        }, {
+	                            name: 'BRAKE CABLE CASING',
+	                            item: 'N/A'
+	                        }, {
+	                            name: 'BRAKE ROTORS',
+	                            item: 'N/A'
+	                        }]
+	                    }, {
+	                        name: 'WHEELS',
+	                        items: [{
+	                            name: 'FRONT HUB',
+	                            item: 'DT 370 front 20x110mm'
+	                        }, {
+	                            name: 'FRONT HUB SKEWER',
+	                            item: 'Rockshox 20mm axle, allen key type'
+	                        }, {
+	                            name: 'REAR HUB',
+	                            item: 'DT 370 rear hub 142x12 mm'
+	                        }, {
+	                            name: 'REAR HUB SKEWER',
+	                            item: 'Norco Thru-axle 12mm, allen key'
+	                        }, {
+	                            name: 'SPOKES/NIPPLES',
+	                            item: 'Sapim butted black stainless steel spokes'
+	                        }, {
+	                            name: 'RIMS',
+	                            item: 'WTB STP I29'
+	                        }, {
+	                            name: 'TIRES',
+	                            item: 'Maxxis Minion DHF frnt , DHR II rear 27.5x2.40 Super Tacky'
+	                        }, {
+	                            name: 'TUBES',
+	                            item: 'N/A'
+	                        }]
+	                    }, {
+	                        name: 'DRIVETRAIN',
+	                        items: [{
+	                            name: 'SHIFTER FRONT',
+	                            item: 'N/A'
+	                        }, {
+	                            name: 'SHIFTER REAR',
+	                            item: 'Sram GX 1 7 speed trigger'
+	                        }, {
+	                            name: 'FRONT DERAILLEUR',
+	                            item: 'N/A'
+	                        }, {
+	                            name: 'REAR DERAILLEUR',
+	                            item: 'Sram GX DH 7 speed mid cage'
+	                        }, {
+	                            name: 'CASSETTE',
+	                            item: 'Sram CS PG 720 DH 11-25T cassette'
+	                        }, {
+	                            name: 'CRANKSET',
+	                            item: 'Race Face Chester crank 36T'
+	                        }, {
+	                            name: 'BOTTOM BRACKET',
+	                            item: 'Comes with crank'
+	                        }, {
+	                            name: 'PEDALS',
+	                            item: 'N/A'
+	                        }, {
+	                            name: 'CHAIN',
+	                            item: 'Sram PC 1110 11 speed chain'
+	                        }]
+	                    }]
+	                }]
+	            },
+	            footer: {
+	                info: [{
+	                    title: 'company',
+	                    links: ['About Norco', 'Comuntity Support', 'Careers']
+	                }, {
+	                    title: 'support',
+	                    links: ['Privacy Policy', 'FAQ', 'Warranty', 'Safety & Recalls', 'Owner\'s Manual']
+	                }, {
+	                    title: 'helpful links',
+	                    links: ['Resort & Demo Partners', 'Intended Use', 'Bicycle Archives', 'Bike Finder', 'Bike Registration']
+	                }],
+	                copyrights: '© 2016 Norco Bicycles | Use of this site constitutes acceptance of our Privacy Policy'
+	            }
+	        };
+
 	        return _react2.default.createElement(
 	            'div',
 	            null,
-	            _react2.default.createElement(Header, null),
-	            _react2.default.createElement(Bike, null),
-	            _react2.default.createElement(Overview, null),
-	            _react2.default.createElement(Features, null),
-	            _react2.default.createElement(Technology, null),
-	            _react2.default.createElement(Characters, null),
-	            _react2.default.createElement(Footer, null)
+	            _react2.default.createElement(Header, { data: data.header }),
+	            _react2.default.createElement(Bike, { data: data.bike }),
+	            _react2.default.createElement(Overview, { data: data.overview }),
+	            _react2.default.createElement(Features, { data: data.features }),
+	            _react2.default.createElement(Technology, { data: data.technology }),
+	            _react2.default.createElement(Characters, { data: data.characters }),
+	            _react2.default.createElement(Footer, { data: data.footer })
 	        );
 	    }
 	});

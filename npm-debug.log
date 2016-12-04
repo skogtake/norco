@@ -1,13 +1,16 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'run', 'dev' ]
-2 info using npm@3.10.6
-3 info using node@v0.12.7
+1 verbose cli [ '/home/ashtrie/.nvm/versions/node/v7.2.0/bin/node',
+1 verbose cli   '/home/ashtrie/.nvm/versions/node/v7.2.0/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'dev' ]
+2 info using npm@3.10.9
+3 info using node@v7.2.0
 4 verbose run-script [ 'predev', 'dev', 'postdev' ]
 5 info lifecycle norco@1.0.0~predev: norco@1.0.0
 6 silly lifecycle norco@1.0.0~predev: no script for predev, continuing
 7 info lifecycle norco@1.0.0~dev: norco@1.0.0
 8 verbose lifecycle norco@1.0.0~dev: unsafe-perm in lifecycle true
-9 verbose lifecycle norco@1.0.0~dev: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/home/ashtrie/web/norco/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+9 verbose lifecycle norco@1.0.0~dev: PATH: /home/ashtrie/.nvm/versions/node/v7.2.0/lib/node_modules/npm/bin/node-gyp-bin:/home/ashtrie/web/norco/node_modules/.bin:/home/ashtrie/.nvm/versions/node/v7.2.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 10 verbose lifecycle norco@1.0.0~dev: CWD: /home/ashtrie/web/norco
 11 silly lifecycle norco@1.0.0~dev: Args: [ '-c',
 11 silly lifecycle   'concurrently --kill-others "npm run webpack-watch" "npm run express-server"' ]
@@ -15,18 +18,20 @@
 13 info lifecycle norco@1.0.0~dev: Failed to exec dev script
 14 verbose stack Error: norco@1.0.0 dev: `concurrently --kill-others "npm run webpack-watch" "npm run express-server"`
 14 verbose stack Exit status 1
-14 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:255:16)
-14 verbose stack     at EventEmitter.emit (events.js:110:17)
-14 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:40:14)
-14 verbose stack     at ChildProcess.emit (events.js:110:17)
-14 verbose stack     at maybeClose (child_process.js:1015:16)
-14 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1087:5)
+14 verbose stack     at EventEmitter.<anonymous> (/home/ashtrie/.nvm/versions/node/v7.2.0/lib/node_modules/npm/lib/utils/lifecycle.js:255:16)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at EventEmitter.emit (events.js:191:7)
+14 verbose stack     at ChildProcess.<anonymous> (/home/ashtrie/.nvm/versions/node/v7.2.0/lib/node_modules/npm/lib/utils/spawn.js:40:14)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at ChildProcess.emit (events.js:191:7)
+14 verbose stack     at maybeClose (internal/child_process.js:885:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
 15 verbose pkgid norco@1.0.0
 16 verbose cwd /home/ashtrie/web/norco
 17 error Linux 3.16.0-38-generic
-18 error argv "node" "/usr/local/bin/npm" "run" "dev"
-19 error node v0.12.7
-20 error npm  v3.10.6
+18 error argv "/home/ashtrie/.nvm/versions/node/v7.2.0/bin/node" "/home/ashtrie/.nvm/versions/node/v7.2.0/bin/npm" "run" "dev"
+19 error node v7.2.0
+20 error npm  v3.10.9
 21 error code ELIFECYCLE
 22 error norco@1.0.0 dev: `concurrently --kill-others "npm run webpack-watch" "npm run express-server"`
 22 error Exit status 1
